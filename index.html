@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Job Tracker by Kat and Team</title>
+    <link rel="icon" href="kat.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <div class="container">
+        <header>
+          <div class="logo"><img src="Logo.png" /></div>
+        </header>
+
+        <h2>Create a new job</h2>
+        <div class="job-entry">
+          <div class="job-name">
+            <label for="new-job">Job Name</label>
+            <input
+              id="new-job-name"
+              required
+              minlength="4"
+              placeholder="Write a new job..."
+              type="text"
+            />
+          </div>
+          <div class="job-priority">
+            <label for="job-prio">Job Priority</label>
+            <select id="job-prio-list">
+              <option value="0">Choose</option>
+              <option id="urgent" value="urgent">Urgent</option>
+              <option id="regular" value="regular">Regular</option>
+              <option id="trivial" value="trivial">Trivial</option>
+            </select>
+          </div><div class="job-due-date">
+            <label for="due-date">Due Date</label>
+            <input id="due-date" type="date" />
+          </div>
+          <div class="button">
+            <div class="spacer"></div>
+            <button disabled id="crtBtn">+ Create</button>
+          </div>
+        </div>
+        <div class="job-list-head">
+          <h2>Job List</h2>
+          <h4 id="job-count">5/5 Jobs</h4>
+        </div>
+        <div class="job-list">
+          <input type="text" id="search-field" placeholder="Search a Job..." />
+          <select id="search-prio">
+            <option value="">Priority (all)</option>
+            <option id="urgent" value="urgent">Urgent</option>
+            <option id="regular" value="regular">Regular</option>
+            <option id="trivial" value="trivial">Trivial</option>
+          </select>
+        </div>
+        <div class="table">
+          <div class="table-item table-head">
+            <p>Name</p>
+            <p class="prio">Priority</p>
+            <p class="due-date">Due Date</p>
+            <p class="action">Edit</p>
+            <p class="action">Delete</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c93c1db267.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
